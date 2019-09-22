@@ -1,0 +1,16 @@
+.fullscreen-section {
+  height: 100vh;
+  & > .row {
+    height: 100%;
+  }
+  .section-part {
+    height: 100%;
+    &_bg {
+      background-color: #000;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+$letters-delay: .2s;
+$letters-time: .5s;
+$circle-delay: .8s;
+$circle-time: .35s;
+$drops-time: .35s;
+$drops-delay: 1.2s;
+
+
+.brand-screen {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  .logo-group {
+    display: flex;
+    align-items: center;
+    max-width: 83%;
+    margin: auto;
+
+    opacity: 0;
+    -webkit-transition: $letters-time opacity $letters-delay linear;
+    -moz-transition: $letters-time opacity $letters-delay linear;
+    -ms-transition: $letters-time opacity $letters-delay linear;
+    -o-transition: $letters-time opacity $letters-delay linear;
+    transition: $letters-time opacity $letters-delay linear;
+  }
+  svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+  }
+  .drops {
+    opacity: 0;
+    -webkit-transition: $drops-time opacity $drops-delay linear;
+    -moz-transition:  $drops-time opacity $drops-delay linear;
+    -ms-transition: $drops-time opacity $drops-delay linear;
+    -o-transition: $drops-time opacity $drops-delay linear;
+    transition: $drops-time opacity $drops-delay linear;
+    fill: #B45631;
+  }
+  .letter-white {
+    fill: #ffffff;
+  }
+}
+
+.black-group {
+  width: 59.3%;
+  path {
+    fill: #000000;
+  }
+}
+
+.white-group {
+  position: relative;
+  width: 34.8%;
+  .circle {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    border-radius: 50%;
+    background: #B45631;
+    right: 1vw;
+    top: 50%;
+    bottom: 0;
+    z-index: 2;
+
+    -webkit-transform: translate(-100%, -50%);
+    -moz-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    -o-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+
+    -webkit-transition: $circle-delay ease $circle-time;
+    -moz-transition: $circle-delay ease $circle-time;
+    -ms-transition: $circle-delay ease $circle-time;
+    -o-transition: $circle-delay ease $circle-time;
+    transition: $circle-delay ease $circle-time;
+  }
+}
+
+.enter-animation {
+  .logo-group,
+  .studio-letter,
+  .drops {
+    opacity: 1;
+  }
+
+  .circle {
+    opacity: 1;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+  }
+}
+
+.leave-animation {
+  .circle {
+    -webkit-transition: .85s linear;
+    -moz-transition: .85s linear;
+    -ms-transition:.85s linear;
+    -o-transition: .85s linear;
+    transition: .85s linear;
+    opacity: 0.5;
+    height: 100vh;
+    width: 100vh;
+  }
+}
