@@ -10,7 +10,7 @@
   "author": "iLavs",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-autoprefixer": "4.1.0",
     "gulp-include": "2.3.1",
     "gulp-if": "2.0.2",
